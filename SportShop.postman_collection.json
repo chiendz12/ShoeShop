@@ -1,0 +1,1365 @@
+{
+	"info": {
+		"_postman_id": "474d8253-a837-49f3-be8e-00fed23e350a",
+		"name": "SportShop",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "25693899"
+	},
+	"item": [
+		{
+			"name": "Auth",
+			"item": [
+				{
+					"name": "Login",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\": \"admin\",\r\n    \"password\": \"123456\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3001/api/auth/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"api",
+								"auth",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Register",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"firstName\": \"pham\",\r\n    \"lastName\": \"kiem\",\r\n    \"username\": \"kiem\",\r\n    \"password\": \"123456\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3001/api/auth/register",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"api",
+								"auth",
+								"register"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "ReadUser",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3001/api/user/readUser",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"api",
+								"user",
+								"readUser"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ReadUserById",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3001/api/user/readUserById/3",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"api",
+								"user",
+								"readUserById",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "WriteUser",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"firstName\": \"pham\",\r\n    \"lastName\": \"kiem\",\r\n    \"username\": \"kiem\",\r\n    \"password\": \"123456\",\r\n    \"email\":\"admin@gmail.com\",\r\n    \"phoneNumber\":\"0382738187\",\r\n    \"address\":\"17A\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3001/api/user/writeUser",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"api",
+								"user",
+								"writeUser"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UpdateUser",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"firstName\": \"pham\",\r\n    \"lastName\": \"kiem\",\r\n    \"username\": \"kiem\",\r\n    \"password\": \"123456\",\r\n    \"email\":\"admin@gmail.com\",\r\n    \"phoneNumber\":\"0382738187\",\r\n    \"address\":\"17AB\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3001/api/user/updateUser/7",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"api",
+								"user",
+								"updateUser",
+								"7"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ChangeStatusUser",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3001/api/user/changeStatusUser/7/true",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"api",
+								"user",
+								"changeStatusUser",
+								"7",
+								"true"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Size",
+			"item": [
+				{
+					"name": "ReadSize",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3001/api/size/readSize",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"api",
+								"size",
+								"readSize"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ReadSizeById",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3001/api/size/readSizeById/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"api",
+								"size",
+								"readSizeById",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "WriteSize",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"size\": 23,\r\n    \"description\": \"\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3001/api/size/writeSize",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"api",
+								"size",
+								"writeSize"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UpdateSize",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"size\": 23,\r\n    \"description\": \"test\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3001/api/size/updateSize/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"api",
+								"size",
+								"updateSize",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ChangeStatusSize",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3001/api/size/changeStatusSize/1/true",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"api",
+								"size",
+								"changeStatusSize",
+								"1",
+								"true"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Color",
+			"item": [
+				{
+					"name": "ReadColor",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3001/api/color/readColor",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"api",
+								"color",
+								"readColor"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ReadColorById",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3001/api/color/readColorById/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"api",
+								"color",
+								"readColorById",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "WriteColor",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"White\",\r\n    \"colorCode\": \"#ffffff\",\r\n    \"description\": \"\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3001/api/color/writeColor",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"api",
+								"color",
+								"writeColor"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UpdateColor",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"color\": \"WWhite\",\r\n    \"colorCode\": \"#ffffff\",\r\n    \"description\": \"test\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3001/api/color/updateColor/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"api",
+								"color",
+								"updateColor",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ChangeStatusColor",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3001/api/color/changeStatusColor/1/true",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"api",
+								"color",
+								"changeStatusColor",
+								"1",
+								"true"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Category",
+			"item": [
+				{
+					"name": "ReadCategory",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3001/api/category/readCategory",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"api",
+								"category",
+								"readCategory"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ReadSizeById",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3001/api/category/readCategoryById/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"api",
+								"category",
+								"readCategoryById",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "WriteCategory",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Njke\",\r\n    \"description\": \"\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3001/api/category/writeCategory",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"api",
+								"category",
+								"writeCategory"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UpdateCategory",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Njke\",\r\n    \"description\": \"test\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3001/api/category/updateCategory/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"api",
+								"category",
+								"updateCategory",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ChangeStatusCategory",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3001/api/category/changeStatusCategory/1/true",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"api",
+								"category",
+								"changeStatusCategory",
+								"1",
+								"true"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Product",
+			"item": [
+				{
+					"name": "ReadProduct",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3001/api/product/readProduct",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"api",
+								"product",
+								"readProduct"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ReadProductById",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3001/api/product/readProductById/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"api",
+								"product",
+								"readProductById",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "WriteProduct",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Sản phẩm P\",\r\n    \"category\": 1,\r\n    \"description\": \"\",\r\n    \"productDetails\": [\r\n        {\r\n            \"price\": 25,\r\n            \"quantity\": 15,\r\n            \"size\": 2,\r\n            \"color\": 1\r\n        },\r\n        {\r\n            \"price\": 25,\r\n            \"quantity\": 15,\r\n            \"size\": 1,\r\n            \"color\": 2\r\n        }\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3001/api/product/writeProduct",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"api",
+								"product",
+								"writeProduct"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UpdateProduct",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": 2,\r\n    \"name\": \"Sản phẩm B\",\r\n    \"image\": \"https://firebasestorage.googleapis.com/v0/b/shoeshop-e5f23.appspot.com/o/default-product.jpg?alt=media\",\r\n    \"category\": 1,\r\n    \"description\": \"\",\r\n    \"createdDate\": \"2023-10-28T17:52:00.000Z\",\r\n    \"status\": true,\r\n    \"productDetails\": [\r\n        // {\r\n        //     \"id\": 10,\r\n        //     \"price\": 25,\r\n        //     \"quantity\": 15,\r\n        //     \"size\": 1,\r\n        //     \"color\": 1,\r\n        //     \"product\": 2,\r\n        //     \"createdDate\": \"2023-10-28T18:43:00.000Z\"\r\n        // },\r\n        {\r\n            \"price\": 25,\r\n            \"quantity\": 15,\r\n            \"size\": 1,\r\n            \"color\": 1\r\n        }\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3001/api/product/updateProduct/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"api",
+								"product",
+								"updateProduct",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ChangeStatusProduct",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3001/api/product/changeStatusProduct/1/true",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"api",
+								"product",
+								"changeStatusProduct",
+								"1",
+								"true"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "OrderDetailInCart",
+			"item": [
+				{
+					"name": "ReadOrderDetailInCart",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3001/api/orderDetailInCart/readOrderDetailInCart",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"api",
+								"orderDetailInCart",
+								"readOrderDetailInCart"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ReadOrderDetailInCartById",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3001/api/orderDetailInCart/readOrderDetailInCartById/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"api",
+								"orderDetailInCart",
+								"readOrderDetailInCartById",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ReadOrderDetailInCartByUserId",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3001/api/orderDetailInCart/readOrderDetailInCartByUserId/3",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"api",
+								"orderDetailInCart",
+								"readOrderDetailInCartByUserId",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "WriteOrderDetailInCart",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"product\": 1,\r\n    \"color\": 1,\r\n    \"size\": 1,\r\n    \"quantity\": 1,\r\n    \"customer\": 1,\r\n    \"check\": 1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3001/api/orderDetailInCart/writeOrderDetailInCart",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"api",
+								"orderDetailInCart",
+								"writeOrderDetailInCart"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UpdateOrderDetailInCart",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"quantity\": 1,\r\n    \"check\": false\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3001/api/orderDetailInCart/updateOrderDetailInCart/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"api",
+								"orderDetailInCart",
+								"updateOrderDetailInCart",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ChangeStatusOrderDetailInCart",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3001/api/orderDetailInCart/changeStatusOrderDetailInCart/2/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"api",
+								"orderDetailInCart",
+								"changeStatusOrderDetailInCart",
+								"2",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Order",
+			"item": [
+				{
+					"name": "ReadOrder",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3001/api/order/readOrder",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"api",
+								"order",
+								"readOrder"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ReadOrderById",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3001/api/order/readOrderById/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"api",
+								"order",
+								"readOrderById",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ReadOrderByUserId",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3001/api/order/readOrderByUserId/3",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"api",
+								"order",
+								"readOrderByUserId",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "WriteOrder",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"customer\": 1,\r\n    \"fullName\": \"Kiem\",\r\n    \"phoneNumber\": \"03738283747\",\r\n    \"address\": \"17A\",\r\n    \"total\": 15,\r\n    \"orderDetails\": [\r\n        {\r\n            \"id\": 1,\r\n            \"product\": 1,\r\n            \"color\": 1,\r\n            \"size\": 1,\r\n            \"quantity\": 1,\r\n            \"customer\": 1,\r\n            \"check\": true,\r\n            \"status\": true,\r\n            \"createdDate\": \"2023-10-28T19:13:00.000Z\"\r\n        }\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3001/api/order/writeOrder",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"api",
+								"order",
+								"writeOrder"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UpdateOrder",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"quantity\": 1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3001/api/order/updateOrder/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"api",
+								"order",
+								"updateOrder",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ChangeStatusOrder",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3001/api/order/changeStatusOrder/1/0",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"api",
+								"order",
+								"changeStatusOrder",
+								"1",
+								"0"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
